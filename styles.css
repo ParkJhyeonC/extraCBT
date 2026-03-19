@@ -1,0 +1,64 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f2a44;
+  background: linear-gradient(180deg, #f6f8ff 0%, #eef2ff 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; border: none; }
+textarea, input, select { width: 100%; border: 1px solid #cfd7ff; border-radius: 16px; padding: 0.95rem 1rem; background: #fff; }
+textarea { resize: vertical; }
+.app-shell { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+.login-shell { min-height: 100vh; display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; align-items: center; }
+.hero-card, .login-card, .panel, .metric-card { background: rgba(255,255,255,0.9); border: 1px solid rgba(177,189,255,0.7); border-radius: 28px; padding: 1.5rem; box-shadow: 0 16px 40px rgba(99,102,241,0.08); }
+.hero-card h1, .topbar h1, .section-header h2, .login-card h2 { margin: 0.2rem 0 0.75rem; }
+.hero-copy { max-width: 42rem; color: #44506a; }
+.eyebrow { margin: 0; color: #5f6fff; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.feature-grid, .metric-grid, .responsive-grid { display: grid; gap: 1rem; }
+.feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1.5rem; }
+.metric-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.responsive-grid { grid-template-columns: minmax(280px, 360px) minmax(0, 1fr); }
+.teacher-records { align-items: start; }
+.info-card, .detail-card, .list-card, .empty-state { border-radius: 20px; background: #f8f9ff; border: 1px solid #e1e6ff; padding: 1rem; }
+.list-card { text-align: left; width: 100%; display: grid; gap: 0.2rem; }
+.list-card.selected { border-color: #5f6fff; background: #eef1ff; }
+.topbar, .section-header, .button-row, .topbar-actions { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; }
+.topbar { margin-bottom: 1rem; flex-wrap: wrap; }
+.user-pill, .status-pill { display: inline-flex; align-items: center; padding: 0.55rem 0.9rem; border-radius: 999px; background: #eef1ff; color: #4553d6; font-weight: 700; }
+.tabbar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 1rem; }
+.tabbar button { border-radius: 18px; padding: 0.9rem; background: rgba(255,255,255,0.75); color: #48556f; }
+.tabbar button.active { background: #5f6fff; color: white; }
+.teacher-tabs { max-width: 560px; }
+.primary-btn, .ghost-btn { border-radius: 18px; padding: 0.9rem 1.1rem; min-height: 48px; }
+.primary-btn { background: #5f6fff; color: white; }
+.ghost-btn { background: #edf1ff; color: #334155; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.progress-track { width: 100%; height: 10px; border-radius: 999px; background: #dbe3ff; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, #5f6fff, #7c8cff); }
+.stack-lg > * + * { margin-top: 1rem; }
+.stack-md > * + * { margin-top: 0.75rem; }
+.stack-sm > * + * { margin-top: 0.45rem; }
+.bullet-list { margin: 0; padding-left: 1.25rem; color: #44506a; }
+.error-text { color: #dc2626; margin: 0; }
+.demo-accounts { margin-top: 1rem; border-top: 1px solid #e5eaff; padding-top: 1rem; color: #44506a; }
+.metric-card strong { display: block; font-size: 2rem; color: #1e2f74; }
+.metric-card span { color: #5a6481; }
+.mobile-first-layout, .teacher-layout { display: grid; gap: 1rem; }
+.empty-state { min-height: 240px; display: grid; place-items: center; color: #667085; }
+@media (max-width: 900px) { .login-shell, .responsive-grid, .metric-grid, .feature-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .app-shell { padding: 0.75rem; }
+  .hero-card, .login-card, .panel, .metric-card { padding: 1rem; border-radius: 22px; }
+  .button-row { flex-wrap: wrap; }
+  .button-row > * { flex: 1 1 40%; }
+  .topbar-actions { width: 100%; justify-content: space-between; }
+  .user-pill { font-size: 0.82rem; }
+  .tabbar button { padding: 0.8rem 0.6rem; }
+}
